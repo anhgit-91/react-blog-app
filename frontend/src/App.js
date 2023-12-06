@@ -1,12 +1,14 @@
-import { GlobalStyle, Container } from "./styles/index";
+import { GlobalStyle, Wrapper } from "./styles/index";
 import { Navbar } from "./components/index";
+import { Home } from "./pages/index";
 
 function App() {
     return (
-        <Container>
+        <Wrapper>
             <GlobalStyle />
-            <Navbar></Navbar>
-        </Container>
+            <Navbar />
+            <Home />
+        </Wrapper>
     );
 }
 

@@ -1,3 +1,3 @@
-import { Container } from "../styles/container";
+import Home from "../pages/home/Home";
 
-export { Container };
+export { Home };

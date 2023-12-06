@@ -9,9 +9,11 @@ export const GlobalStyle = createGlobalStyle`
         --color-primary: rgb(95, 103, 236);
         --color-secondary: rgb(120, 139, 149);
         --color-header: rgb(17, 23, 26);
-        --color-text: rgb(38, 50, 56);
+        --color-text: #263238;
         --color-gradient: linear-gradient(#6627FF 0%, #0066CC 100%);
-        --bg-category: rgb(219, 221, 222);
+        --color-border: #E7EBED;
+        --bg-category: #F5F7F8;
+        --bg-subscribe: #EEEEEE;
         --shadow-article: 0px 0px 11px 0px rgb(50 50 50 / 47%);
 
         // font-family
@@ -35,16 +37,14 @@ body {
         font-family: 'Montserrat', sans-serif; 
         font-size: 1.6rem;
         line-height: 2;
+
+       
     }
 
 a {
         text-decoration: none;
         
     }
-
-a:visited {
-  color: inherit;
-}
 
 input,
 textarea,

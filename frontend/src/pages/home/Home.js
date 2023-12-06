@@ -1,6 +1,16 @@
+import { Footer, Header, Posts, Subscribe } from "../../components/index";
 import { HomeContainer } from "./home.styled";
 
 const Home = () => {
-    return <HomeContainer>Home</HomeContainer>;
+    return (
+        <>
+            <Header />
+            <HomeContainer>
+                <Posts />
+                <Subscribe />
+                <Footer />
+            </HomeContainer>
+        </>
+    );
 };
 export default Home;
