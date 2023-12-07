@@ -2,34 +2,64 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleModal } from "../../features/modal/modalSlice";
 
 import {
-    SignUpContainer,
+    SignInContainer,
     FormContainer,
-    SignUpForm,
-    SignUpFormButtons,
+    SignInForm,
+    FormInput,
+    SignInWrapper,
+    FormPolicy,
     Icon,
     CloseButton,
-} from "./signUp.styled";
+} from "./signIn.styled";
 
-const SignUp = () => {
-    const isSignUpVisible = useSelector((state) => state.modal.isSignUpVisible);
+const SignIn = () => {
+    const isSignInVisible = useSelector((state) => state.modal.isSignInVisible);
     const dispatch = useDispatch();
 
     const handleSwitch = () => {
-        dispatch(toggleModal("signUp"));
         dispatch(toggleModal("signIn"));
+        dispatch(toggleModal("signUp"));
     };
 
-    if (!isSignUpVisible) {
+    if (!isSignInVisible) {
         return null;
     }
 
     return (
         <>
-            <SignUpContainer>
+            <SignInContainer>
+                <SignInWrapper />
                 <FormContainer>
-                    <SignUpForm>
-                        <h1>Join Copyblogger</h1>
-                        <SignUpFormButtons>
+                    <CloseButton
+                        onClick={() => dispatch(toggleModal("signIn"))}
+                    >
+                        <svg
+                            width="2.1rem"
+                            height="2.1rem"
+                            viewBox="0 0 1024 1024"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#000000"
+                        >
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    fill="#000000"
+                                    d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"
+                                ></path>
+                            </g>
+                        </svg>
+                    </CloseButton>
+                    <SignInForm>
+                        <h1>Welcome back.</h1>
+                        <FormInput>
+                            <input type="text" placeholder="Username" />
+                            <input type="password" placeholder="Password" />
+                            <button className="center">Sign In</button>
                             <button>
                                 <Icon
                                     viewBox="-0.5 0 48 48"
@@ -57,7 +87,7 @@ const SignUp = () => {
                                             stroke="none"
                                             strokeWidth="1"
                                             fill="none"
-                                            fillRule="evenodd"
+                                            fill-rule="evenodd"
                                         >
                                             {" "}
                                             <g
@@ -103,77 +133,35 @@ const SignUp = () => {
                                         </g>{" "}
                                     </g>
                                 </Icon>
-                                <span>Sign up with Google</span>
-                                <div></div>
-                            </button>
-                            <button>
-                                <Icon
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g
-                                        id="SVGRepo_bgCarrier"
-                                        strokeWidth="0"
-                                    ></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        {" "}
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
-                                            fill="#080341"
-                                        ></path>{" "}
-                                    </g>
-                                </Icon>
-                                <span>Sign up with Email</span>
+                                <span>Sign in with Google</span>
                                 <div></div>
                             </button>
                             <p>
-                                Already have an account?{" "}
-                                <a href="#" onClick={() => handleSwitch()}>
-                                    Sign in
+                                NO account?{" "}
+                                <a
+                                    className="largeFont"
+                                    href="#"
+                                    onClick={() => handleSwitch()}
+                                >
+                                    Create one
                                 </a>
                             </p>
-                        </SignUpFormButtons>
-                        <p>
-                            Click “Sign up” to agree to Medium’s{" "}
-                            <u>Terms of Service</u> and acknowledge that
-                            Medium’s <u>Privacy Policy</u> applies to you.
-                        </p>
-                    </SignUpForm>
-                    <CloseButton
-                        onClick={() => dispatch(toggleModal("signUp"))}
-                    >
-                        <svg
-                            width="2.1rem"
-                            height="2.1rem"
-                            viewBox="0 0 1024 1024"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#000000"
-                        >
-                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                            <g
-                                id="SVGRepo_tracerCarrier"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    fill="#000000"
-                                    d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"
-                                ></path>
-                            </g>
-                        </svg>
-                    </CloseButton>
+                        </FormInput>
+                        <FormPolicy>
+                            <p>
+                                Forgot email or trouble signing in?{" "}
+                                <a href="#">Get help</a>
+                            </p>
+                            <p>
+                                Click “Sign in” to agree to Medium’s{" "}
+                                <u>Terms of Service</u> and acknowledge that
+                                Medium’s <u>Privacy Policy</u> applies to you.
+                            </p>
+                        </FormPolicy>
+                    </SignInForm>
                 </FormContainer>
-            </SignUpContainer>
+            </SignInContainer>
         </>
     );
 };
-export default SignUp;
+export default SignIn;

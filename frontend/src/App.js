@@ -1,8 +1,8 @@
 import { GlobalStyle, Wrapper } from "./styles/index";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { Navbar } from "./components/index";
-import { Home, SignUp, SignIn } from "./pages/index";
+import { Navbar, SignIn, SignUp } from "./components/index";
+import { Home } from "./pages/index";
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
             <Wrapper>
                 <Navbar />
             </Wrapper>
-            {/* <Home /> */}
+            <Home />
             <SignIn />
             <SignUp />
         </>

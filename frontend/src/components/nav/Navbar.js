@@ -23,11 +23,9 @@ const Navbar = () => {
                         <li>About</li>
                         <li>Write</li>
                         <li>
-                            <button
-                                onClick={() => dispatch(toggleModal("signIn"))}
-                            >
+                            <a onClick={() => dispatch(toggleModal("signIn"))}>
                                 Sign In
-                            </button>
+                            </a>
                         </li>
                         <li>
                             <button
