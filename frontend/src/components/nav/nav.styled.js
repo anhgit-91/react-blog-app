@@ -8,7 +8,7 @@ export const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 10;
 `;
 
 export const NavLogo = styled.div`
@@ -40,7 +40,7 @@ export const NavLinks = styled.div`
             }
         }
 
-        span {
+        button {
             padding: 0.5rem 1.2rem;
             text-align: center;
             background-color: var(--color-primary);

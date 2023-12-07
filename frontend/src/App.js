@@ -1,14 +1,20 @@
 import { GlobalStyle, Wrapper } from "./styles/index";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import { Navbar } from "./components/index";
-import { Home } from "./pages/index";
+import { Home, SignUp, SignIn } from "./pages/index";
 
 function App() {
     return (
-        <Wrapper>
+        <>
             <GlobalStyle />
-            <Navbar />
-            <Home />
-        </Wrapper>
+            <Wrapper>
+                <Navbar />
+            </Wrapper>
+            {/* <Home /> */}
+            <SignIn />
+            <SignUp />
+        </>
     );
 }
 
