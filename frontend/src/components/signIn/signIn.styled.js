@@ -129,40 +129,33 @@ export const FormInput = styled.form`
         font-weight: 400;
         line-height: 2.4rem;
         margin-top: -1.6rem;
-        a {
-            font-weight: 600;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
         .largeFont {
             font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
     }
-`;
-
-// ICON
-export const Icon = styled.svg`
-    /* margin-right: auto; */
-    width: 2.1rem;
-    height: 2.1rem;
 `;
 
 // POLICY
 export const FormPolicy = styled.div`
     p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 400;
         line-height: 2.4rem;
         padding: 0 1.6rem;
 
-        a {
+        span {
             font-weight: 600;
+            color: var(--color-primary);
 
             &:hover {
                 text-decoration: underline;
+                cursor: pointer;
             }
         }
     }

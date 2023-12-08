@@ -8,7 +8,6 @@ export const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 `;
 
 export const NavLogo = styled.div`

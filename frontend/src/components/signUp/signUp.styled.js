@@ -58,12 +58,19 @@ export const SignUpForm = styled.div`
 `;
 
 // INPUTS && BUTTONS
-export const FormInput = styled.form`
+export const FormInput = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2.4rem;
+
+    .error {
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: red;
+    }
 
     input {
         width: 30rem;
@@ -129,25 +136,16 @@ export const FormInput = styled.form`
         font-weight: 400;
         line-height: 2.4rem;
         margin-top: -1.6rem;
-        a {
-            font-weight: 600;
 
+        .largeFont {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-primary);
             &:hover {
                 text-decoration: underline;
             }
         }
-
-        .largeFont {
-            font-size: 1.4rem;
-        }
     }
-`;
-
-// ICON
-export const Icon = styled.svg`
-    /* margin-right: auto; */
-    width: 2.1rem;
-    height: 2.1rem;
 `;
 
 // POLICY
