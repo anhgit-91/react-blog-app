@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
         width: 100%;
         height: 50rem;
         background-color: var(--color-primary);
-        z-index: -1;
         opacity: 0.1;
     }
 `;

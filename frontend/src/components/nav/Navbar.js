@@ -1,12 +1,7 @@
 import { Container } from "../../styles/index";
 import { NavContainer, NavLogo, NavLinks } from "./nav.styled";
-import { useSelector, useDispatch } from "react-redux";
-import { toggleSignIn } from "../../features/modal/modalSlice";
 
 const Navbar = () => {
-    const isVisible = useSelector((state) => state.modal.isSignInVisible);
-    const dispatch = useDispatch();
-
     return (
         <Container>
             <NavContainer>
@@ -21,9 +16,7 @@ const Navbar = () => {
                         <li>About</li>
                         <li>Write</li>
                         <li>
-                            <button onClick={() => dispatch(toggleSignIn())}>
-                                Get started
-                            </button>
+                            <button>Get started</button>
                         </li>
                     </ul>
                 </NavLinks>

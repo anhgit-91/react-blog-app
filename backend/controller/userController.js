@@ -1,20 +1,8 @@
-import User from "../model/user.js";
+import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 
-export const signupUser = async (req, res) => {
-    const { username, email, password } = req.body;
-
-    try {
-        const hashedPassword = await bcrypt.hash(password, 12);
-        const user = await User.create({
-            username,
-            email,
-            password: hashedPassword,
-        });
-
-        res.json({ success: true, user });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, message: "Error signing up" });
-    }
+export const home = (req, res) => {
+    res.json({
+        message: "Welcome to the backend!",
+    });
 };

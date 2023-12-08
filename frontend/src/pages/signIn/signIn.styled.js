@@ -8,18 +8,6 @@ export const SignInContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5;
-`;
-
-export const SignInWrapper = styled.div`
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    opacity: 0.95;
-    z-index: 6;
 `;
 
 export const FormContainer = styled.div`
@@ -34,7 +22,6 @@ export const FormContainer = styled.div`
     border-radius: 0.4rem;
     box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
     background-color: white;
-    z-index: 50;
 `;
 
 export const SignInForm = styled.div`
@@ -159,13 +146,4 @@ export const FormPolicy = styled.div`
             }
         }
     }
-`;
-
-// CLOSE BUTTON
-export const CloseButton = styled.div`
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 33;
-    cursor: pointer;
 `;
