@@ -55,7 +55,7 @@ export const SignUpForm = styled.div`
 `;
 
 // INPUTS && BUTTONS
-export const FormInput = styled.div`
+export const FormInput = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,6 +142,16 @@ export const FormInput = styled.div`
                 text-decoration: underline;
             }
         }
+    }
+`;
+
+// ERROR
+export const Error = styled.div`
+    p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+        color: red;
     }
 `;
 

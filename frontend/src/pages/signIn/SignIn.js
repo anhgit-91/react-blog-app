@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
     SignInContainer,
     FormContainer,
@@ -24,7 +26,11 @@ const SignIn = () => {
                             </button>
                             <p>
                                 NO account?{" "}
-                                <span className="largeFont">Create one</span>
+                                <Link to="/register">
+                                    <span className="largeFont">
+                                        Create one
+                                    </span>
+                                </Link>
                             </p>
                         </FormInput>
                         <FormPolicy>
