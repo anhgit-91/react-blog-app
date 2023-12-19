@@ -31,16 +31,20 @@ export const NavLinks = styled.div`
             margin-left: 2.4rem;
             font-size: 1.6rem;
             font-weight: 500;
-            color: var(--color-secondary);
-            cursor: pointer;
-            transform: all 0.2s ease-in-out;
 
-            &:hover {
-                color: var(--color-primary);
+            a {
+                color: var(--color-secondary);
+                text-decoration: none;
+                cursor: pointer;
+                transform: all 0.2s ease-in-out;
+
+                &:hover {
+                    color: var(--color-primary);
+                }
             }
         }
 
-        button {
+        .btn a {
             padding: 0.5rem 1.2rem;
             text-align: center;
             background-color: var(--color-primary);

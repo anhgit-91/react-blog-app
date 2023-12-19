@@ -1,5 +1,6 @@
 import { Container } from "../../styles/index";
 import { NavContainer, NavLogo, NavLinks } from "./nav.styled";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -11,12 +12,18 @@ const Navbar = () => {
 
                 <NavLinks>
                     <ul>
-                        <li>Home</li>
-                        <li>Articles</li>
-                        <li>About</li>
-                        <li>Write</li>
                         <li>
-                            <button>Get started</button>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>Articles</li>
+                        <li>
+                            <Link to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link to="/write">Write</Link>
+                        </li>
+                        <li className="btn">
+                            <Link to="/register">Get started</Link>
                         </li>
                     </ul>
                 </NavLinks>

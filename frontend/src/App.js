@@ -7,9 +7,9 @@ function App() {
     return (
         <Router>
             <GlobalStyle />
-            {/* <Wrapper>
-                <Navbar />
-            </Wrapper> */}
+
+            <Navbar />
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

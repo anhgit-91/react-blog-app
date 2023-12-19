@@ -128,6 +128,16 @@ export const FormInput = styled.form`
     }
 `;
 
+// ERROR
+export const Error = styled.div`
+    p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+        color: red;
+    }
+`;
+
 // POLICY
 export const FormPolicy = styled.div`
     p {
